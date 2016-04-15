@@ -47,5 +47,6 @@ Example with all *(default)* options and browserSync:
             });
     });
 
+Then run `gulp watch`
 
 License: MIT

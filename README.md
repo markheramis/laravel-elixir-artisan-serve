@@ -1,6 +1,8 @@
 Laravel Elixir Artisan Serve
 ============================
 
+Current Version: 1.0.1
+
 A simple Elixir Mix to run artisan serve.
 
     var elixir = require('laravel-elixir');
@@ -12,6 +14,14 @@ A simple Elixir Mix to run artisan serve.
     });
 
 The mix will only run if gulp is run with watch. This was created to simplify local development utilizing browserSync.
+
+How to Install
+--------------
+
+    npm install --save laravel-elixir artisan serve
+
+Full Featured Example
+---------------------
 
 Example with all *(default)* options and browserSync:
 
@@ -38,5 +48,4 @@ Example with all *(default)* options and browserSync:
     });
 
 
-Current Version: 1.0.1
 License: MIT

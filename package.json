@@ -1,0 +1,28 @@
+{
+  "name": "laravel-elixir-artisan-serve",
+  "version": "1.0.0",
+  "description": "Elixer Wrapper to run artisan serve for use with browserSync",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Laravel",
+    "Elixer",
+    "Serve"
+  ],
+  "author": "Kevin Gravier <kevin@mrkmg.com>",
+  "license": "MIT",
+  "dependencies": {
+    "extend": "3.0.0",
+    "gulp-util": "3.0.7"
+  },
+  "homepage": "https://github.com/mrkmg/laravel-elixir-artisan-serve",
+  "bugs": {
+    "url": "https://github.com/mrkmg/laravel-elixir-artisan-serve/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrkmg/laravel-elixir-artisan-serve"
+  }
+}

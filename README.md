@@ -1,7 +1,7 @@
 Laravel Elixir Artisan Serve
 ============================
 
-Current Version: 1.0.3
+Current Version: 1.0.4
 
 A simple Elixir Mix to run artisan serve.
 

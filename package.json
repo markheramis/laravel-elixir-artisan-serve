@@ -1,6 +1,6 @@
 {
   "name": "laravel-elixir-artisan-serve",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Elixer Wrapper to run artisan serve for use with browserSync",
   "main": "index.js",
   "scripts": {

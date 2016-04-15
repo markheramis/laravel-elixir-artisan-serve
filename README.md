@@ -1,7 +1,7 @@
 Laravel Elixir Artisan Serve
 ============================
 
-Current Version: 1.0.3
+Current Version: 1.0.4
 
 A simple Elixir Mix to run artisan serve.
 
@@ -18,7 +18,7 @@ The mix will only run if gulp is run with watch. This was created to simplify lo
 How to Install
 --------------
 
-    npm install --save laravel-elixir artisan serve
+    npm install --save laravel-elixir-artisan-serve
 
 Full Featured Example
 ---------------------

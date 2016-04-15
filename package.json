@@ -16,5 +16,13 @@
   "dependencies": {
     "extend": "3.0.0",
     "gulp-util": "3.0.7"
+  },
+  "homepage": "https://github.com/mrkmg/laravel-elixir-artisan-serve",
+  "bugs": {
+    "url": "https://github.com/mrkmg/laravel-elixir-artisan-serve/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrkmg/laravel-elixir-artisan-serve"
   }
 }

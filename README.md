@@ -18,7 +18,7 @@ The mix will only run if gulp is run with watch. This was created to simplify lo
 How to Install
 --------------
 
-    npm install --save laravel-elixir artisan serve
+    npm install --save laravel-elixir-artisan-serve
 
 Full Featured Example
 ---------------------

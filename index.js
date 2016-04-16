@@ -10,7 +10,6 @@ var ChildProcess = require('child_process');
 
 var Elixir = require('laravel-elixir');
 var Extend = require('extend');
-var GulpUtil = require('gulp-util');
 var Chalk = require('chalk');
 
 Elixir.extend("artisanServe", function (options)
@@ -27,7 +26,7 @@ Elixir.extend("artisanServe", function (options)
     }, options);
 
     // artisanServe will only run during `gulp watch`.
-    if (GulpUtil.env._.indexOf('watch') > -1)
+    if (process.argv.slice(2).indexOf('watch') > -1)
     {
         runner_arguments = [
             options.artisan_path,

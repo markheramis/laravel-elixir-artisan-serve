@@ -1,12 +1,23 @@
+/**
+ * laravel-elixir-artisan-serve
+ *
+ * Author: Kevin Gravier <kevin@mrkmg.com>
+ * License: MIT
+ */
+
+
 var ChildProcess = require('child_process');
 
-var elixir = require('laravel-elixir');
+var Elixir = require('laravel-elixir');
 var Extend = require('extend');
 var GulpUtil = require('gulp-util');
 var Chalk = require('chalk');
 
-elixir.extend("artisanServe", function (options)
+Elixir.extend("artisanServe", function (options)
 {
+    var runner_arguments, runner;
+
+    // apply options to defaults
     options = Extend({
         'php_path': '/usr/bin/php',
         'artisan_path': './artisan',
@@ -18,25 +29,34 @@ elixir.extend("artisanServe", function (options)
     // artisanServe will only run during `gulp watch`.
     if (GulpUtil.env._.indexOf('watch') > -1)
     {
-        var runner = ChildProcess.spawn(options.php_path, [options.artisan_path, 'serve', '--host', options.host, '--port', options.port]);
+        runner_arguments = [
+            options.artisan_path,
+            'serve',
+            '--host', options.host,
+            '--port', options.port
+        ];
 
+        // Spawn the PHP process with artisan and the options to serve
+        runner = ChildProcess.spawn(options.php_path, runner_arguments);
+
+        // Redirect stdout from artisan with tag
         runner.stdout.on('data', function (data)
         {
             process.stdout.write(Chalk.blue('[artisanServe]') + " " + data);
         });
 
+        // Artisan serve outputs requests on stderr, so redirect those if wanted
         if (options.show_requests)
         {
             runner.stderr.on('data', function (data)
             {
-                process.stderr.write(Chalk.blue('[artisanServe]') + " " + data);
+                process.stdout.write(Chalk.blue('[artisanServe]') + " " + data);
             });
         }
-
     }
 
     // Dummy Task
-    new elixir.Task('artisanServe', function ()
+    new Elixir.Task('artisanServe', function ()
     {
     });
 });
